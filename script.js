@@ -24,8 +24,12 @@ async function getStatus() {
 
   if(data.status === '0'){
     pin7status.innerText = 'The light is OFF.'
+    pin7offbtn.disabled = true;
+    pin7onbtn.disabled =false;
   }else if(data.status === '1'){
     pin7status.innerText = 'The light is ON.'
+    pin7offbtn.disabled = false;
+    pin7onbtn.disabled = true;
   }
 
   document.getElementById('pin7onbtn').classList.remove('hide');
